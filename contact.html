@@ -1,0 +1,147 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<head>
+
+<style>
+  .cal-input {
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    background: transparent;
+  }
+  .cal-input.ng-invalid {
+    color:white;
+    background: red;
+  }
+</style>
+
+<script type="text/javascript">
+
+
+/*
+
+function clearform()
+{
+
+document.getElementById("user").value="";
+document.getElementById("email").value="";
+document.getElementById("comment").value="";
+document.getElementById("verify").value="";
+
+}
+
+
+function validateEmail()
+{
+ 
+   var emailID = document.getElementById("email").value ;
+   atpos = emailID.indexOf("@");
+   dotpos = emailID.lastIndexOf(".");
+   if (atpos < 1 || ( dotpos - atpos < 2 )) 
+   {
+       alert("Please enter correct email ID")
+       document.getElementById("email").focus() ;
+       return false;
+   }
+   else
+   return true ;
+}
+
+function validate()
+{
+
+var uservalue=document.getElementById("user").value ;
+var emailvalue=document.getElementById("email").value ;
+var verifyvalue=document.getElementById("verify").value ;
+var commentvalue=document.getElementById("comment").value ;
+
+
+   if( uservalue == "" )
+   {
+     alert( "Please provide your name!" );
+     document.getElementById("user").focus() ;
+     return false;
+   }
+   if( emailvalue == "" )
+   {
+     alert( "Please provide your Email!" );
+     document.getElementById("email").focus() ;
+     return false;
+   }else{
+     // Put extra check for data format
+     var ret = validateEmail();
+     if( ret == false )
+     {
+          return false;
+     }
+   }
+ 
+    if( document.getElementById("comment").value== "" ||
+    
+           document.getElementById("comment").value.length <= 5 )
+   {
+     alert( "Please comment more than five words" );
+    document.getElementById("comment").focus() ;
+     return false;
+   }
+    if( verifyvalue != "2" )
+   {
+     alert( "Are you robot?!Please input again!" );
+     document.getElementById("verify").focus() ;
+     return false;
+   }
+   
+   
+   return( true );
+}
+*/
+ //<input type="submit" value="Submit" action="contactform.php" name="myForm"  onsubmit="return(validate());">
+
+</script>
+</head>
+<body>
+   
+
+		
+	
+		
+
+ <div class="container" ng-controller="contactController">
+ 	<p>{{ message }}</p>
+ <form name="myForm" align="left" autocomplete="on" autofocus>
+ 
+ 
+ <p id="p1">Login Name as your name:</p>
+
+<input type="text" name="user"  maxlength="25" id="user" placeholder={{name}} ng-model="contact.UserName" disabled>
+<br><br>
+<p>Login email as your E-mail:</p> <input type="email" name="email"  id="email" placeholder={{email}} ng-model="contact.Email" disabled><br>
+ <br><br>
+ 
+  <p>Comment here Please:</p>
+ <textarea name="comment" rows="15" id="comment" placeholder="Please write your comment here" require ng-model="contact.Comment">
+
+</textarea>
+
+<br><br>
+ 
+ <p>Human verification 1+1=:</p>
+
+<input type="text" name="verifycal"  id="verifycal"  placeholder="your answer here" ng-model="contact.cal" ng-pattern="/^\d+$/" class="cal-input" >
+
+
+  <br> <br>
+  <button ng-click="contactSummit(contact)">Submit</button>
+
+<button ng-click="clearform()">Clear Form</button>
+
+ </form>
+	
+
+	
+	
+	
+
+  </div>	
+
+</body>
+</html>

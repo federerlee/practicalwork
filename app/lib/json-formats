@@ -1,0 +1,27 @@
+    "name" : "Some Company Oy"
+    "street" : "Some Street 123"
+    "city" : "Timbuctoo"
+    "postalcode" : "01110"
+    "country" : "Suoland"
+    "annual_turnover" : "1230000"
+    "company_domain" : ""
+    "person_responsible" : 8
+    "created_at" : ""
+    "updated_at": ""
+    "status" : ""
+    
+    
+    
+    {
+    "name" : "Some Company Oy",
+    "street" : "Some Street 123",
+    "city" : "Timbuctoo",
+    "postalcode" : "01110",
+    "country" : "Suoland",
+    "annual_turnover" : "1230000",
+    "company_domain" : "1",
+    "person_responsible" : 8,
+    "created_at" : "",
+    "updated_at": "",
+    "status" : 1
+}

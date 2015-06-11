@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//function Redirect()
+//{
+ // http://home.tamk.fi/~e4lguoli/practicalwork/redirect.html
+ //location.href = "http://home.tamk.fi/~e4lguoli/practicalwork/main.html";
+//}
+//Redirect();
+
+
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+	//location.href = "http://home.tamk.fi/~e4lguoli/practicalwork/main.html";
+};
+</script>
+<?php
+
+	//header("Location: http://home.tamk.fi/~e4lguoli/practicalwork/main.html");
+	//http_redirect("http://home.tamk.fi/~e4lguoli/practicalwork/main.html#/contact");
+	//http_redirect("http://home.tamk.fi/~e4lguoli/practicalwork/main.html#", array("name" => "value"), true, HTTP_REDIRECT_PERM);
+	//exit;
+?>
+</body>
+</html>
